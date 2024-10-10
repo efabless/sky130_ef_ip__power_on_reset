@@ -1,0 +1,9 @@
+[submodule "dependencies/sky130_am_ip__ldo_01v8"]
+	path = dependencies/sky130_am_ip__ldo_01v8
+	url = ../sky130_am_ip__ldo_01v8.git
+[submodule "dependencies/sky130_ak_ip__cmos_vref"]
+	path = dependencies/sky130_ak_ip__cmos_vref
+	url = ../sky130_ak_ip__cmos_vref.git
+[submodule "dependencies/sky130_sw_ip__bgrref_por"]
+	path = dependencies/sky130_sw_ip__bgrref_por
+	url = ../sky130_sw_ip__bgrref_por.git
