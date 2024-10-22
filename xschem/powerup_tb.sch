@@ -78,7 +78,7 @@ N 760 40 760 150 {
 lab=vss}
 N 280 130 310 130 {
 lab=porb_h_1}
-C {powerup_subsystem.sym} 130 70 0 0 {name=x1}
+C {sky130_ef_ip__power_on_reset.sym} 130 70 0 0 {name=x1}
 C {devices/vsource.sym} 760 10 0 0 {name=VVDDIO value="DC 3.3 PWL(0 0 1u 0 1m \{vvddio\})" savecurrent=false}
 C {devices/vsource.sym} 620 70 0 0 {name=VVDDA value="DC 3.3 PWL(0 0 1u 0 1m \{vvddio\})" savecurrent=false}
 C {devices/vsource.sym} 480 120 0 0 {name=VVCCD value="DC 1.8 PWL(0 0 10u 0 600u \{vvccd\})" savecurrent=false}

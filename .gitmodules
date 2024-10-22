@@ -7,3 +7,9 @@
 [submodule "dependencies/sky130_sw_ip__bgrref_por"]
 	path = dependencies/sky130_sw_ip__bgrref_por
 	url = ../sky130_sw_ip__bgrref_por.git
+[submodule "dependencies/sky130_ef_ip__analog_switches"]
+	path = dependencies/sky130_ef_ip__analog_switches
+	url = ../../RTimothyEdwards/sky130_ef_ip__analog_switches.git
+[submodule "dependencies/sky130_cw_ip"]
+	path = dependencies/sky130_cw_ip
+	url = ../sky130_cw_ip.git
