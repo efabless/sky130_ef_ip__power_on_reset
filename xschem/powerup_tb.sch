@@ -61,7 +61,7 @@ lab=logic1}
 N -60 30 -20 30 {
 lab=logic0}
 N -60 10 -20 10 {
-lab=logic0}
+lab=#net3}
 N -60 -10 -20 -10 {
 lab=logic1}
 N -60 -30 -20 -30 {
@@ -78,6 +78,12 @@ N 760 40 760 150 {
 lab=vss}
 N 280 130 310 130 {
 lab=porb_h_1}
+N -300 10 -60 10 {
+lab=#net3}
+N -300 10 -300 100 {
+lab=#net3}
+N -330 160 -300 160 {
+lab=vss}
 C {sky130_ef_ip__power_on_reset.sym} 130 70 0 0 {name=x1}
 C {devices/vsource.sym} 760 10 0 0 {name=VVDDIO value="DC 3.3 PWL(0 0 1u 0 1m \{vvddio\})" savecurrent=false}
 C {devices/vsource.sym} 620 70 0 0 {name=VVDDA value="DC 3.3 PWL(0 0 1u 0 1m \{vvddio\})" savecurrent=false}
@@ -103,7 +109,6 @@ C {devices/lab_pin.sym} -410 70 0 1 {name=p13 sig_type=std_logic lab=logic0}
 C {devices/lab_pin.sym} -60 -50 0 0 {name=p14 sig_type=std_logic lab=logic0}
 C {devices/lab_pin.sym} -60 -30 0 0 {name=p15 sig_type=std_logic lab=logic0}
 C {devices/lab_pin.sym} -60 -10 0 0 {name=p16 sig_type=std_logic lab=logic1}
-C {devices/lab_pin.sym} -60 10 0 0 {name=p17 sig_type=std_logic lab=logic0}
 C {devices/lab_pin.sym} -60 30 0 0 {name=p18 sig_type=std_logic lab=logic0}
 C {devices/lab_pin.sym} -60 50 0 0 {name=p19 sig_type=std_logic lab=logic1}
 C {devices/code_shown.sym} -690 200 0 0 {name=s1 only_toplevel=false value="* Cheetah v3 power-up test
@@ -112,11 +117,11 @@ C {devices/code_shown.sym} -690 200 0 0 {name=s1 only_toplevel=false value="* Ch
 .include /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_ls/spice/sky130_fd_sc_ls.spice
 .include /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
 * low-typ-high = -40 27 100
-.option temp=-40
+.option temp=27
 * low-typ-high = 2.97 3.3 3.63
-.param vvddio=2.97
+.param vvddio=3.3
 * low-typ-high = 1.62 1.8 1.98
-.param vvccd=1.62"}
+.param vvccd=1.8"}
 C {devices/code_shown.sym} -690 450 0 0 {name=s2 only_toplevel=false value="* Run transient startup
 .control
    save all
@@ -127,3 +132,5 @@ C {devices/code_shown.sym} -690 450 0 0 {name=s2 only_toplevel=false value="* Ru
 .endc
 .end"}
 C {devices/opin.sym} 310 130 0 0 {name=p20 lab=porb_h_1}
+C {devices/vsource.sym} -300 130 0 0 {name=VREFSW value="DC 1.8 PWL(0 0 65m 0 65.0001m \{vvccd\})" savecurrent=false}
+C {devices/lab_wire.sym} -330 160 0 0 {name=p17 sig_type=std_logic lab=vss}
