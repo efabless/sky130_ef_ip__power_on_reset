@@ -61,7 +61,7 @@ lab=logic1}
 N -60 30 -20 30 {
 lab=logic0}
 N -60 10 -20 10 {
-lab=#net3}
+lab=logic0}
 N -60 -10 -20 -10 {
 lab=logic1}
 N -60 -30 -20 -30 {
@@ -78,16 +78,10 @@ N 760 40 760 150 {
 lab=vss}
 N 280 130 310 130 {
 lab=porb_h_1}
-N -300 10 -60 10 {
-lab=#net3}
-N -300 10 -300 100 {
-lab=#net3}
-N -330 160 -300 160 {
-lab=vss}
 C {sky130_ef_ip__power_on_reset.sym} 130 70 0 0 {name=x1}
-C {devices/vsource.sym} 760 10 0 0 {name=VVDDIO value="DC 3.3 PWL(0 0 1u 0 1m \{vvddio\})" savecurrent=false}
-C {devices/vsource.sym} 620 70 0 0 {name=VVDDA value="DC 3.3 PWL(0 0 1u 0 1m \{vvddio\})" savecurrent=false}
-C {devices/vsource.sym} 480 120 0 0 {name=VVCCD value="DC 1.8 PWL(0 0 10u 0 600u \{vvccd\})" savecurrent=false}
+C {devices/vsource.sym} 760 10 0 0 {name=VVDDIO value="DC 3.3 PWL(0 0 1u 0 100u \{vvddio\} 300u \{vvddio\} 400u 0)" savecurrent=false}
+C {devices/vsource.sym} 620 70 0 0 {name=VVDDA value="DC 3.3 PWL(0 0 1u 0 100u \{vvddio\})" savecurrent=false}
+C {devices/vsource.sym} 480 120 0 0 {name=VVCCD value="DC 1.8 PWL(0 0 1u 0 60u \{vvccd\})" savecurrent=false}
 C {devices/opin.sym} 310 70 0 0 {name=p1 lab=por}
 C {devices/opin.sym} 310 90 0 0 {name=p2 lab=porb}
 C {devices/opin.sym} 310 110 0 0 {name=p3 lab=porb_h_0}
@@ -125,12 +119,12 @@ C {devices/code_shown.sym} -690 200 0 0 {name=s1 only_toplevel=false value="* Ch
 C {devices/code_shown.sym} -690 450 0 0 {name=s2 only_toplevel=false value="* Run transient startup
 .control
    save all
-   tran 100n 70m
+   tran 100n 500u  
    plot V(vddio) V(vccd0) V(vdda0)
    plot V(por) V(porb) V(porb_h_0)
    plot V(vbg) V(vbgsc) V(vbgtc)
+   plot x1.x15.x1.vo1 x1.x15.x1.vt vddio,x1.x15.vo
 .endc
 .end"}
 C {devices/opin.sym} 310 130 0 0 {name=p20 lab=porb_h_1}
-C {devices/vsource.sym} -300 130 0 0 {name=VREFSW value="DC 1.8 PWL(0 0 65m 0 65.0001m \{vvccd\})" savecurrent=false}
-C {devices/lab_wire.sym} -330 160 0 0 {name=p17 sig_type=std_logic lab=vss}
+C {devices/lab_pin.sym} -60 10 0 0 {name=p17 sig_type=std_logic lab=logic0}

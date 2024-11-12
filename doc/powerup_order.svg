@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="powerup_order" width="100%" height="100%"  viewBox="-6 -6 2820 2074">
+<desc>
+XCircuit Version 3.10
+File "power_on_reset.ps" Page 3
+</desc>
+<g stroke="black">
+<g transform="matrix( 1.5    0   -0  1.5  13  44)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">Power-on-reset behavior&#8212;Order of power supplies</tspan>
+</text></g>
+<path d="M333,236 L333,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 301 492)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-49" y="15">0V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 141 396)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-111" y="15">VDDA</tspan>
+</text></g>
+<path d="M333,332 L2669,332 " fill="none" style="stroke-dasharray:4,4" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" stroke="#000000" />
+<path d="M333,412 L2669,412 " fill="none" style="stroke-dasharray:4,4" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 301 268)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-83" y="15">3.3V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 2693 332)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="15">V<tspan dy="9" font-size="26.8">trip</tspan></tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 2693 412)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="15">V<tspan dy="9" font-size="26.8">triplow</tspan></tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 125 1116)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-125" y="15">Vcomp</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 125 1388)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-58" y="11">por</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 125 1564)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-80" y="15">porb</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1196)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-49" y="15">0V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1068)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-83" y="15">1.8V</tspan>
+</text></g>
+<path d="M557,236 L557,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#cccccc" />
+<path d="M1197,236 L1197,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#cccccc" />
+<path d="M1805,236 L1805,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#cccccc" />
+<path d="M2381,236 L2381,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#cccccc" />
+<g transform="matrix(   1    0   -0    1 301 1420)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-22" y="14">0</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1324)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-83" y="15">1.8V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1612)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-22" y="14">0</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1516)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-83" y="15">1.8V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 141 748)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-113" y="15">VCCD</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 844)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-49" y="15">0V</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 684)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-83" y="15">1.8V</tspan>
+</text></g>
+<path d="M333,844 L749,844 805,684 1389,684 1453,844 1541,844 1605,684 2197,684 2261,844 2669,844 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#0000ff" />
+<path d="M333,492 L493,492 589,268 1133,268 1229,492 1733,492 1829,268 2317,268 2413,492 2669,492 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#0000ff" />
+<path d="M333,1196 L781,1196 781,1068 1197,1068 1197,1196 1805,1196 1805,1068 2221,1068 2221,1196 2669,1196 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M333,748 L2669,748 " fill="none" style="stroke-dasharray:4,4" stroke-width="2" stroke-linecap="butt" stroke-linejoin="bevel" stroke="#000000" />
+<path d="M781,676 L781,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#d2b48c" />
+<path d="M1413,676 L1413,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#d2b48c" />
+<path d="M1581,676 L1581,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#d2b48c" />
+<path d="M2221,676 L2221,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#d2b48c" />
+<path d="M781,1260 L869,1260 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M973,1260 L1069,1260 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M1041,1268 C1051,1263 1054,1263 1069,1260 C1054,1257 1051,1257 1041,1252 C1043,1258 1043,1262 1041,1268 " fill="#000000" stroke="none" />
+<path d="M809,1268 C799,1263 796,1263 781,1260 C796,1257 799,1257 809,1252 C807,1258 807,1262 809,1268 " fill="#000000" stroke="none" />
+<g transform="matrix(   1    0   -0    1 925 1260)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-38" y="13">t<tspan dy="9" font-size="26.8">delay</tspan></tspan>
+</text></g>
+<path d="M1805,1260 L1893,1260 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M1997,1260 L2093,1260 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M2065,1268 C2075,1263 2078,1263 2093,1260 C2078,1257 2075,1257 2065,1252 C2067,1258 2067,1262 2065,1268 " fill="#000000" stroke="none" />
+<path d="M1833,1268 C1823,1263 1820,1263 1805,1260 C1820,1257 1823,1257 1833,1252 C1831,1258 1831,1262 1833,1268 " fill="#000000" stroke="none" />
+<g transform="matrix(   1    0   -0    1 1949 1260)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-38" y="13">t<tspan dy="9" font-size="26.8">delay</tspan></tspan>
+</text></g>
+<path d="M1069,1212 L1069,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#d2b48c" />
+<path d="M333,1420 L781,1420 781,1324 1069,1324 1069,1420 1197,1420 1197,1324 1413,1324 1413,1420 1581,1420 1581,1324 2093,1324 2093,1420 2669,1420 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 2693 748)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="15">V<tspan dy="9" font-size="26.8">threshlv</tspan></tspan>
+</text></g>
+<path d="M753,916 C763,911 766,911 781,908 C766,905 763,905 753,900 C755,906 755,910 753,916 " fill="#000000" stroke="none" />
+<path d="M585,916 C575,911 572,911 557,908 C572,905 575,905 585,900 C583,906 583,910 585,916 " fill="#000000" stroke="none" />
+<path d="M1609,916 C1599,911 1596,911 1581,908 C1596,905 1599,905 1609,900 C1607,906 1607,910 1609,916 " fill="#000000" stroke="none" />
+<path d="M1777,916 C1787,911 1790,911 1805,908 C1790,905 1787,905 1777,900 C1779,906 1779,910 1777,916 " fill="#000000" stroke="none" />
+<g transform="matrix(   1    0   -0    1 637 916)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">t<tspan dy="9" font-size="26.8">hvlv</tspan></tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 1669 916)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">t<tspan dy="9" font-size="26.8">lvhv</tspan></tspan>
+</text></g>
+<path d="M621,908 L557,908 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M781,908 L709,908 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M1581,908 L1653,908 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M1797,908 L1741,908 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<path d="M2093,1196 L2093,1900 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#d2b48c" />
+<path d="M333,1612 L1069,1612 1069,1516 1197,1516 1197,1612 2093,1612 2093,1516 2221,1516 2221,1612 2669,1612 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 333 1996)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">1.  Vcomp output cannot operate when VCCD is below V<tspan dy="9" font-size="26.8">threshlv</tspan><tspan y="0">.</tspan></tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 333 2060)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="0" y="0">2.  por cannot assert when VCCD is low;  therefore porb is recommended to drive chip asynchronous reset.</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1860)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-22" y="14">0</tspan>
+</text></g>
+<g transform="matrix(   1    0   -0    1 301 1708)" fill="#a52a2a" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-83" y="15">3.3V</tspan>
+</text></g>
+<path d="M333,1860 L1069,1860 1069,1708 1197,1708 1197,1860 2093,1860 2093,1708 2221,1708 2221,1860 2669,1860 " fill="none" stroke-width="2" stroke-linejoin="bevel" stroke-linecap="round" stroke="#000000" />
+<g transform="matrix(   1    0   -0    1 125 1780)" fill="#000000" >
+<text stroke="none" font-family="Helvetica" font-size="40" ><tspan x="-125" y="15">porb_h</tspan>
+</text></g>
+</g>
+</svg>
