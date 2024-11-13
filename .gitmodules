@@ -5,7 +5,7 @@
 	path = dependencies/sky130_ak_ip__cmos_vref
 	url = ../sky130_ak_ip__cmos_vref.git
 [submodule "dependencies/sky130_sw_ip__bgrref_por"]
-	path = dependencies/sky130_sw_ip__bgrref_por
+	path = dependencies/sky130_sw_ip__por
 	url = ../sky130_sw_ip__por.git
 [submodule "dependencies/sky130_ef_ip__analog_switches"]
 	path = dependencies/sky130_ef_ip__analog_switches
