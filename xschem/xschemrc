@@ -5,22 +5,10 @@ if {![info exists PDK]} {
 
 # Add current directory to xschem library path
 append XSCHEM_LIBRARY_PATH :[file dirname [info script]]
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../
 
-# Source the dependencies
-#source [file dirname [info script]]/../dependencies/sky130_ak_ip__cmos_vref/xschem/xschemrc
-#source [file dirname [info script]]/../dependencies/sky130_am_ip__ldo_01v8/xschem/xschemrc
-#source [file dirname [info script]]/../dependencies/sky130_cw_ip/xschem/xschemrc
-#source [file dirname [info script]]/../dependencies/sky130_ef_ip__analog_switches/xschem/xschemrc
-#source [file dirname [info script]]/../dependencies/sky130_sw_ip__bgrref_por/xschem/xschemrc
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_ak_ip__cmos_vref/
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_am_ip__ldo_01v8/
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_cw_ip/
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_ef_ip__analog_switches/
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_sw_ip__bgrref_por/
-
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_ak_ip__cmos_vref/xschem
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_am_ip__ldo_01v8/xschem
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_cw_ip/xschem
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_ef_ip__analog_switches/xschem
-append XSCHEM_LIBRARY_PATH :[file dirname [info script]]/../dependencies/sky130_sw_ip__bgrref_por/xschem
+# Source the dependencies xschemrc files
+source [file dirname [info script]]/../dependencies/sky130_ak_ip__cmos_vref/xschem/xschemrc
+source [file dirname [info script]]/../dependencies/sky130_am_ip__ldo_01v8/xschem/xschemrc
+source [file dirname [info script]]/../dependencies/sky130_cw_ip/xschem/xschemrc
+source [file dirname [info script]]/../dependencies/sky130_ef_ip__analog_switches/xschem/xschemrc
+source [file dirname [info script]]/../dependencies/sky130_sw_ip__bgrref_por/xschem/xschemrc
