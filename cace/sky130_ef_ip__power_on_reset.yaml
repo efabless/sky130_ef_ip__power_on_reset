@@ -1,0 +1,495 @@
+# Initial CACE characterization file >> pins section needs to be modified 
+
+name: sky130_ef_ip__power_on_reset
+description: Bandgap-referenced Power-on-Reset subsystem 
+PDK: sky130A
+cace_format: 5.2
+
+authorship:
+  designer: NA
+  company: NA
+  creation_date: NA
+  license: Apache 2.0
+
+paths:
+  root: ..
+  documentation: docs
+  schematic: xschem
+  magic: mag
+  layout: gds
+  netlist: netlist
+
+pins:
+  vbg:
+    description: input bandgap voltage reference
+    type: analog
+    direction: input
+    Vmin: 1.08
+    Vmax: 1.32
+  por:
+    description: reset signal in dvdd domain
+    type: signal
+    direction: output
+    Vmin: 0
+    Vmax: Vdvdd
+  porb:
+    description: reset bar signal in dvdd domain
+    type: signal
+    direction: output
+    Vmin: 0
+    Vmax: Vdvdd
+  porb_h[1:0]:
+    description: reset bar signal in avdd domain
+    type: signal
+    direction: output
+    Vmin: 0
+    Vmax: Vavdd
+  dvdd:
+    description: Digital power supply
+    type: power
+    direction: inout
+    Vmin: 1.64
+    Vmax: 1.96
+  dvss:
+    description: Digital ground
+    type: ground
+    direction: inout
+    Vmin: 0
+    Vmax: 0.3
+  avdd:
+    description: Analog power supply
+    type: power
+    direction: inout
+    Vmin: 2.7
+    Vmax: 5.5
+  avss:
+    description: Analog ground
+    type: ground
+    direction: inout
+    Vmin: 0
+    Vmax: 0.3
+
+default_conditions:
+  Vavdd:
+    description: Analog power supply voltage
+    display: avdd
+    unit: V
+    #minimum: 3
+    typical: 3.3
+    #maximum: 5.5
+  Vavss:
+    description: Analog ground
+    display: avss
+    unit: V
+    typical: 0
+  Vdvdd:
+    description: Digital power supply voltage
+    display: dvdd
+    unit: V
+    #minimum: 1.62
+    typical: 1.8
+    #maximum: 1.98
+  Vdvss:
+    description: Digital ground
+    display: dvss
+    unit: V
+    typical: 0
+  CLw:
+    description: chip distributed wiring capacitive load seen by porb_h signal 
+    display: Cload_wiring 
+    unit: pF
+    #minimum: 0
+    typical: 1
+    #maximum: 5
+  CLb:
+    description: estimated digital buffers load seen by por & porb signals 
+    display: Cload_buffers
+    unit: fF
+    maximum: 200
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    minimum: -40
+    typical: 25
+    maximum: 85
+  corner:
+    description: Process corner
+    display: Corner
+    #enumerate: [ss,tt,ff,ll,hh]
+    minimum: ss
+    typical: tt
+    maximum: ff
+  travdd:
+    description: Analog supply rising time
+    display: Avdd_tr
+    unit: mS
+    #minimum: 0.002
+    typical: 1
+    #maximum: 10
+  trdvdd:
+    description: Digital supply rising time
+    display: Dvdd_tr
+    unit: mS
+    typical: 1
+    #typical: 0.05
+  avdd_delay:
+    description: Independant analog supply delay time (for simulation purposes)
+    display: Avdd_delay
+    unit: mS
+    #typical: 1.5
+    typical: 10e-6
+  dvdd_delay:
+    description: Independant digital supply delay time (for simulation purposes)
+    display: Dvdd_delay
+    unit: mS
+    #typical: 10e-6
+    typical: 2
+  Tsim:
+    description: transient simulation time
+    display: Tsim
+    unit: mS
+    typical: 60
+  Tstep:
+    description: transient simulation max time step
+    display: Tstep
+    unit: uS
+    typical: 5
+
+parameters:
+  tran_params:
+     spec:
+       Iavg:
+         description: Average current consumption (analog+digital)
+         display: Power Consumption 
+         unit: uA
+         minimum:
+           value: any
+         typical:
+           value: 3
+         maximum:
+           value: 5
+       Iavg_ss:
+         description: Steady-state average current consumption (analog+digital) measured when reset is not active
+         display: Steady-State Power Consumption
+         unit: uA
+         minimum:
+           value: any
+         typical:
+           value: any
+         maximum:
+           value: any
+       V_thp:
+         description: Positive trip point of the comparator (point at which reset is released) 
+         display: Output Reset Threshold Voltage
+         unit: V
+         minimum:
+           value: 2.4
+         typical:
+           value: 2.7
+         maximum:
+           value: 3
+       porPulse:
+         description: Time after V_th for reset to deactivate
+         display: Reset Active Time
+         unit: mS
+         minimum:
+           value: 30
+         typical:
+           value: 50
+         maximum:
+           value: 100
+       Vpor_low:
+         description: Reset Output POR Voltage (low)
+         display: Vlow_por
+         unit: V
+         minimum:
+           value: any
+         typical:
+           value: 0.1
+         maximum:
+           value: 0.3
+       Vporb_low:
+         description: Reset Output PORb Voltage (low)
+         display: Vlow_porb
+         unit: V
+         minimum:
+           value: any
+         typical:
+           value: 0.1
+         maximum:
+           value: 0.3
+       Vporb_h_low:
+         description: Reset Output PORb_h Voltage (low)
+         display: Vlow_porb_h
+         unit: V
+         minimum:
+           value: any
+         typical:
+           value: 0.1
+         maximum:
+           value: 0.3
+       Vpor_high_delta:
+         description: Reset Output POR High Voltage Deviation from Dvdd
+         display: por_deviation_from_supply
+         unit: V
+         minimum:
+           value: -0.2
+         typical:
+           value: 0
+         maximum:
+           value: any
+       Vporb_high_delta:
+         description: Reset Output PORb High Voltage Deviation from Dvdd
+         display: porb_deviation_from_supply
+         unit: V
+         minimum:
+           value: -0.2
+         typical:
+           value: 0
+         maximum:
+           value: any
+       Vporbh_high_delta:
+         description: Reset Output PORb_h High Voltage Deviation from Avdd
+         display: porb_h_deviation_from_supply
+         unit: V
+         minimum:
+           value: -0.2
+         typical:
+           value: 0
+         maximum:
+           value: any
+     #conditions:
+       #avdd_delay:
+         #typical: 3
+       #dvdd_delay:
+         #typical: 10e-6
+       #vbg_delay:
+         #typical: 3
+         ##maximum: 10
+     tool:
+       ngspice:
+         template: tran_sim.sch
+         format: ascii
+         suffix: .data
+         variables: [Iavg,Iavg_ss,V_thp,porPulse,Vpor_low,Vporb_low,Vporb_h_low,Vpor_high_delta,Vporb_high_delta,Vporbh_high_delta]
+
+  tran_plot:
+     description: Power-up transient waveforms 
+     display: transient waveforms
+     unit: V
+     tool:
+       ngspice:
+         template: tran_plot.sch
+         format: ascii
+         suffix: .data
+         variables: [time,Avdd,Dvdd,vbg,por,porb,porb_h0]
+     plot:
+       Supplies:
+         suffix: .svg
+         xaxis: time
+         yaxis: [Avdd,Dvdd,vbg]
+       por:
+         suffix: .svg
+         xaxis: time
+         yaxis: por
+       porb:
+         suffix: .svg
+         xaxis: time
+         yaxis: porb
+       porb_h0:
+         suffix: .svg
+         xaxis: time
+         yaxis: porb_h0
+     variables:
+       time:
+         display: Time
+         unit: ms
+       Avdd:
+         display: Avdd
+         unit: V
+       Dvdd:
+         display: Dvdd
+         unit: V
+       vbg:
+         display: vbg
+         unit: V
+       por:
+         display: por
+         unit: V
+       porb:
+         display: porb
+         unit: V
+       porb_h0:
+         display: porb_h0
+         unit: V
+
+  hysteresis:
+    description: Difference between comparator reset assert and deassert levels
+    display: Hysteresis Voltage
+    unit: V
+    spec:
+      hyst:
+        minimum:
+          value: 0.1
+        typical:
+          value: 0.2
+        maximum:
+          value: 0.3
+    conditions:
+      Tsim:
+        typical: 9
+      Tstep:
+        typical: 1
+    tool:
+      ngspice:
+        template: por_hys.sch
+        format: ascii
+        suffix: .data
+        variables: [hyst]
+
+  hyst_tran_plot:
+     description: Hysteresis measurement transient waveforms 
+     display: Hysteresis transient waveforms
+     unit: V
+     tool:
+       ngspice:
+         template: por_hys_plot.sch
+         format: ascii
+         suffix: .data
+         variables: [time,Avdd,Dvdd,vbg,por,porb,porb_h0]
+     plot:
+       Supplies:
+         suffix: .svg
+         xaxis: time
+         yaxis: [Avdd,Dvdd,vbg]
+       por:
+         suffix: .svg
+         xaxis: time
+         yaxis: por
+       porb:
+         suffix: .svg
+         xaxis: time
+         yaxis: porb
+       porb_h0:
+         suffix: .svg
+         xaxis: time
+         yaxis: porb_h0
+     variables:
+       time:
+         display: Time
+         unit: ms
+       Avdd:
+         display: Avdd
+         unit: V
+       Dvdd:
+         display: Dvdd
+         unit: V
+       vbg:
+         display: vbg
+         unit: V
+       por:
+         display: por
+         unit: V
+       porb:
+         display: porb
+         unit: V
+       porb_h0:
+         display: porb_h0
+         unit: V
+     conditions:
+       Tsim:
+         typical: 4
+       Tstep:
+         typical: 1
+
+  Vglitch:
+    spec:
+       Vglitch_dur:
+         description: Duration of detectable analog supply glitches 
+         display: detectable supply glitch duration 
+         unit: uS
+         minimum:
+           value: any
+         typical:
+           value: any
+         maximum:
+           value: any
+       Vglitch_amp:
+         description: Amplitude of detectable analog supply glitches 
+         display: detectable supply glitch amplitude 
+         unit: V
+         minimum:
+           value: any
+         typical:
+           value: any
+         maximum:
+           value: any
+    conditions:
+      Tsim:
+        typical: 4
+      Tstep:
+        typical: 0.0005
+    tool:
+      ngspice:
+        template: por_supply_glitch.sch
+        format: ascii
+        suffix: .data
+        variables: [Vglitch_dur,Vglitch_amp]
+
+
+  magic_area:
+    spec:
+      area:
+        display: Area
+        description: Total circuit layout area
+        unit: µm²
+        maximum:
+          value: any
+      width:
+        display: Width
+        description: Total circuit layout width
+        unit: µm
+        maximum:
+          value: any
+      height:
+        display: Height
+        description: Total circuit layout height
+        unit: µm
+        maximum:
+          value: any
+    tool:
+      magic_area
+
+  magic_drc:
+    description: Magic DRC
+    display: Magic DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      magic_drc:
+        gds_flatten: true
+
+  netgen_lvs:
+    description: Netgen LVS
+    display: Netgen LVS
+    spec:
+      lvs_errors:
+        maximum:
+          value: 0
+    tool:
+      netgen_lvs:
+        script: run_lvs.tcl
+
+  klayout_drc_full:
+    description: KLayout DRC full
+    display: KLayout DRC full
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+        klayout_drc:
+            args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']
